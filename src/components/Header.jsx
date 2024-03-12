@@ -1,10 +1,11 @@
 import React from "react"
+import logoImage from "/src/components/Weighing-Machine.svg"
 
 export default function Header(){
     return (
         <header>
             <h1>MyWeight
-                    <img className="header-h1-img" src="src/assets/images/Weighing-Machine.svg"/>
+                    <img className="header-h1-img" src={logoImage}/>
                 LossCoach
             </h1>
             <p className="header-subtext">Weight loss advice at your fingertips</p>

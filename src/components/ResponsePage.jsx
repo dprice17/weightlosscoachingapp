@@ -5,11 +5,6 @@ export default function ResponsePage(props) {
     const { userInput } = props
     const [ aiResponse, setAiResponse ] = React.useState('Loading coach response.....')
    
-    const openai = new OpenAI({
-        apiKey: REACT_APP_OPENAI_API_KEY
-     });
-       
-   
     const sanitizeAIResponse = (response) => {
        const responseCharsArr = response.split('')
        const sanitizedResponse = responseCharsArr.filter((char) => char !== '#').join('')
@@ -30,6 +25,12 @@ export default function ResponsePage(props) {
             ];
 
             try {
+                const openAIKey = import.meta.env.VITE_REACT_APP_OPENAI_API_KEY
+                const openai = new OpenAI({
+                    apiKey: openAIKey,
+                    dangerouslyAllowBrowser: true 
+                 });
+                   
                 
                 const response = await openai.chat.completions.create({
                     model: 'gpt-3.5-turbo',
