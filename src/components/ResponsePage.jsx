@@ -6,7 +6,7 @@ export default function ResponsePage(props) {
     const [ aiResponse, setAiResponse ] = React.useState('Loading coach response.....')
    
     const openai = new OpenAI({
-        apiKey: vars.REACT_APP_API_KEY
+        apiKey: process.env.REACT_APP_API_KEY
      });
        
    
