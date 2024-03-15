@@ -1,4 +1,5 @@
 import React from "react";
+import OpenAI from "openai";
 
 export default function ResponsePage(props) {
   const { userInput } = props;
