@@ -64,25 +64,3 @@ export default function ResponsePage(props) {
   );
 }
 
-/*
-      
-     */
-
-
-
-      /*
-      React.useEffect(() => {
-    const fetchResultsFromServer = async () => {
-      try {
-        const response = await axios.post("http://localhost:3001/api/data", { userInput });
-        const returnedResponse = response.choices[0].message.content; //response.data;
-        sanitizeAIResponse(returnedResponse);
-    
-      } catch (err) {
-        console.log("Error", err);
-        setAiResponse("Error occurred while fetching data from server.");
-      }
-    };
-    fetchResultsFromServer();
-  }, [userInput]);
-      */
